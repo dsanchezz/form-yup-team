@@ -34,22 +34,23 @@ function FormScreen() {
     }
 
     return (
-        <div>
-            <h2>Registro</h2>
+        <div className="container">
+            
+            <h2>Nuevos usuarios</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input type="text" placeholder="Nombre" {...register("name")} />
+                <input type="text" placeholder="Nombre" {...register("name")} className="form-input" />
                 <p>{errors.name?.message}</p>
-                <input type="text" placeholder="Apellidos" {...register("lastName")} />
+                <input type="text" placeholder="Apellidos" {...register("lastName")} className="form-input" />
                 <p>{errors.lastName?.message}</p>
-                <input type="number" placeholder="Edad" {...register("age")} />
+                <input type="number" placeholder="Edad" {...register("age")} className="form-input" />
                 <p>{errors.age?.message}</p>
-                <input type="text" placeholder="Teléfono" {...register("phone")} />
+                <input type="text" placeholder="Teléfono" {...register("phone")} className="form-input" />
                 <p>{errors.phone?.message}</p>
-                <input type="password" placeholder="Contraseña" {...register("pass")} />
+                <input type="password" placeholder="Contraseña" {...register("pass")} className="form-input"/>
                 <p>{errors.pass?.message}</p>
-                <input type="password" placeholder="Confirmar contraseña" {...register("confirmPass")} />
+                <input type="password" placeholder="Confirmar contraseña" {...register("confirmPass")} className="form-input" />
                 <p>{errors.confirmPass?.message}</p>
-                <button type="submit">Registrarse</button>
+                <button type="submit" className="form-button">Registrarse</button>
             </form>
         </div>
     );
